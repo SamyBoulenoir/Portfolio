@@ -9,7 +9,7 @@ export default function About() {
           <h1>Bienvenue sur mon portfolio !</h1>
         </div>
         <div className='photo-frame'>
-          <Image className='profile-picture' src="moi.png" alt="ma photo" roundedCircle />
+          <Image className='profile-picture' src={process.env.PUBLIC_URL + "/moi.png"} alt="ma photo" roundedCircle />
           <p className='about-informations-text'>Salut, moi c’est Samy Boulenoir
             <br />
             Développeur web fullstack passionné, je conçois des applications web modernes, performantes et bien pensées, du front au back.</p>
@@ -17,7 +17,7 @@ export default function About() {
 
         <div className='about-informations'>
           <a
-            href="/cv_samy_boulenoir.pdf"
+            href={process.env.PUBLIC_URL + "/CV_Boulenoir_Samy.pdf"}
             download
             className="project-button"
             style={{ textDecoration: 'none' }}
