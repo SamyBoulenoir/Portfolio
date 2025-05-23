@@ -1,6 +1,7 @@
 .projects-section {
   height: 100vh;
   height: 100dvh;
+  padding: 2rem;
   background-color: var(--color-bg-grey);
   display: flex;
   justify-content: center;
