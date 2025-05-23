@@ -6,13 +6,13 @@ const projects = [
     title: 'Mona Éducation',
     description: 'Développement et maintenance d’une plateforme de cours en ligne (React, Node.js) dans le cadre de ma formation OpenClassrooms.',
     link: 'http://mona-edu.com/',
-    img: '/Mona.png', 
+    img: 'Mona.png', 
   },
   {
     title: 'Mon GitHub',
     description: 'Dépôt de mes projets personnels, expérimentations, contributions open source. Retrouvez tout mon code sur mon GitHub !',
     link: 'https://github.com/SamyBoulenoir',
-    img: '/Github.webp',
+    img: 'Github.webp',
   },
 ];
 

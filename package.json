@@ -2,10 +2,12 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://SamyBoulenoir.github.io/Portfolio",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.6",
     "framer-motion": "^12.12.1",
+    "gh-pages": "^6.3.0",
     "react": "^19.1.0",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.1.0",
@@ -14,6 +16,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject"
