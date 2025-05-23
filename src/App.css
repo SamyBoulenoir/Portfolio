@@ -3,7 +3,6 @@ html, body {
   padding: 0;
   min-width: 380px;
   height: 100%;
-  overflow: hidden;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -18,4 +17,30 @@ html, body {
   --color-black: #000000;
   --color-shadow: rgba(0, 0, 0, 0.15);
   --color-shadow-hover: rgba(0, 0, 0, 0.2);
+}
+
+
+#about {
+ height: 100vh;
+}
+
+#education {
+  height: 100vh;
+ }
+
+ #projects {
+  height: 100vh;
+ }
+
+ .single-section {
+  height: 100dvh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.motion-wrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }

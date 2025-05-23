@@ -1,5 +1,5 @@
 .education-section {
-  height: 100dvh;
+  min-height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,6 +7,7 @@
   color: var(--color-black);
   flex-direction: column;
   gap: 10px;
+  overflow: hidden;
 }
 
 .education-content {

@@ -5,16 +5,14 @@ export default function ScrollManager({ sectionIds, currentIndex, setCurrentInde
   const touchStartY = useRef(null);
 
   const scrollToSection = (index) => {
-    const section = document.getElementById(sectionIds[index]);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      setCurrentIndex(index);
-      isScrolling.current = true;
+    if (index === currentIndex || isScrolling.current) return;
 
-      setTimeout(() => {
-        isScrolling.current = false;
-      }, 500);
-    }
+    isScrolling.current = true;
+    setCurrentIndex(index);
+    console.log(index)
+    setTimeout(() => {
+      isScrolling.current = false;
+    }, 500);
   };
 
   const handleWheel = (e) => {
@@ -55,7 +53,7 @@ export default function ScrollManager({ sectionIds, currentIndex, setCurrentInde
       window.removeEventListener('touchstart', handleTouchStart);
       window.removeEventListener('touchend', handleTouchEnd);
     };
-  }, [currentIndex, sectionIds]);
+  }, [currentIndex]);
 
   return null;
 }

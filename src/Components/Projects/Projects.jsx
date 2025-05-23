@@ -18,25 +18,25 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="projects-section">
+     <div className='projects-section'>
       <h1 className="project-title">Mes Projets</h1>
-      <div className="projects-grid">
-        {projects.map(({ title, description, link, img }, index) => (
-          <div className="project-block" key={index}>
-            <Image roundedCircle src={img} alt={title} className="project-img" />
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-button"
-            >
-              Visiter
-            </a>
-          </div>
-        ))}
+        <div className="projects-grid">
+          {projects.map(({ title, description, link, img }, index) => (
+            <div className="project-block" key={index}>
+              <Image roundedCircle src={img} alt={title} className="project-img" />
+              <h3>{title}</h3>
+              <p>{description}</p>
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-button"
+              >
+                Visiter
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
-    </section>
-  );
+    );
 }

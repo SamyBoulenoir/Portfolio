@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import About from './Components/About/About.jsx';
 import Education from './Components/Education/Education.jsx';
 import Projects from './Components/Projects/Projects.jsx';
@@ -13,26 +14,43 @@ const sections = [
 ];
 
 export default function App() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [[currentIndex, direction], setIndexAndDirection] = useState([0, 0]);
+
+  const handleChangeIndex = (newIndex) => {
+    if (newIndex === currentIndex) return;
+    const dir = newIndex > currentIndex ? 1 : -1;
+    setIndexAndDirection([newIndex, dir]);
+  };
+
+  const { id, Component } = sections[currentIndex];
 
   return (
     <>
-      {sections.map(({ id, Component }) => (
-        <section id={id} key={id}>
-          <Component />
-        </section>
-      ))}
+      <div className="single-section">
+        <AnimatePresence mode="wait" custom={direction}>
+          <motion.section
+            key={id}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+            className="motion-wrapper"
+          >
+            <Component />
+          </motion.section>
+        </AnimatePresence>
+      </div>
 
       <FloatingMenu
         sections={sections}
         currentIndex={currentIndex}
-        setCurrentIndex={setCurrentIndex}
+        setCurrentIndex={handleChangeIndex}
       />
 
       <ScrollManager
-        sectionIds={sections.map(s => s.id)}
+        sectionIds={sections.map((s) => s.id)}
         currentIndex={currentIndex}
-        setCurrentIndex={setCurrentIndex}
+        setCurrentIndex={handleChangeIndex}
       />
     </>
   );

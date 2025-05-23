@@ -3,7 +3,8 @@ import { Image } from 'react-bootstrap';
 
 export default function About() {
   return (
-    <section id="about" className="about-section">
+    <div className="about-section">
+
       <div className='about-me'>
         <div className='dflex justify-content-center align-items-center flex-row'>
           <h1>Bienvenue sur mon portfolio !</h1>
@@ -26,7 +27,6 @@ export default function About() {
           </a>
         </div>
       </div>
-
-    </section>
+    </div>
   );
 }

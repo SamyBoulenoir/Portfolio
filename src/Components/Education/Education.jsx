@@ -27,7 +27,7 @@ const educationData = [
 
 export default function Education() {
   return (
-    <section id="education" className="education-section">
+    <div className="education-section">
       <h1>Mon parcours</h1>
       <div className="education-content">
         {educationData.map((edu, index) => (
@@ -40,10 +40,9 @@ export default function Education() {
             {index !== educationData.length - 1 && (
               <div className="connector-line"></div>
         )}
-  </div>
-))}
-
+        </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 }
