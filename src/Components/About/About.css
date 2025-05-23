@@ -1,0 +1,105 @@
+.about-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background: var(--color-bg-grey);
+  color: var(--color-black);
+}
+
+.about-me {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: var(--color-bg-grey);
+  color: var(--color-black);
+  width: 50%;
+  gap: 50px;
+}
+
+.about-skills {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: var(--color-bg-grey);
+  color: var(--color-black);
+  width: 50%;
+}
+
+.about-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.about-informations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 50%;
+}
+
+.about-informations-text {
+  width: 100%;
+  text-align: center;
+  color: var(--color-black);
+}
+
+.profile-picture {
+  width: 50%;
+  height: 100%;
+  max-width: 300px;
+  object-fit: contain !important;
+}
+
+.photo-frame {
+  width: 80%;
+  padding: 12px;
+  background: var(--color-bg-light);
+  border: 8px solid #4a2f1d;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+@media (max-width: 1080px) {
+  .about-section {
+    flex-direction: column;
+  }
+
+  .about-me,
+  .about-skills {
+    width: 100%;
+  }
+
+  .about-informations {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .photo-frame {
+    flex-direction: column;
+    width: 90%;
+    padding: 8px;
+    gap: 20px;
+  }
+
+  .profile-picture {
+    width: 80%;
+    max-width: 200px;
+  }
+
+  .about-informations-text {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+}
