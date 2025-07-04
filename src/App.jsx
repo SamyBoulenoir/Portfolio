@@ -5,12 +5,14 @@ import Education from './Components/Education/Education.jsx';
 import Projects from './Components/Projects/Projects.jsx';
 import FloatingMenu from './Components/FloatingMenu/FloatingMenu.jsx';
 import ScrollManager from './Components/ScrollManager/ScrollManager.jsx';
+import Skill from './Components/Skill/Skill.jsx';
 import './App.css';
 
 const sections = [
   { id: 'about', label: 'À propos', Component: About },
   { id: 'education', label: 'Parcours', Component: Education },
   { id: 'projects', label: 'Projets', Component: Projects },
+  { id: 'skill', label: 'Skill', Component: Skill}
 ];
 
 export default function App() {
@@ -40,12 +42,6 @@ export default function App() {
           </motion.section>
         </AnimatePresence>
       </div>
-
-      <FloatingMenu
-        sections={sections}
-        currentIndex={currentIndex}
-        setCurrentIndex={handleChangeIndex}
-      />
 
       <ScrollManager
         sectionIds={sections.map((s) => s.id)}
