@@ -7,7 +7,7 @@ export default function About() {
 
       <div className='about-me'>
         <div className='dflex justify-content-center align-items-center flex-row'>
-          <h1>Bienvenue sur mon portfolio !</h1>
+          <h1 className='about-title'>Bienvenue sur mon portfolio !</h1>
         </div>
         <div className='photo-frame'>
           <Image className='profile-picture' src={process.env.PUBLIC_URL + "/moi.png"} alt="ma photo" roundedCircle />
@@ -25,6 +25,12 @@ export default function About() {
           >
             Télécharger mon CV
           </a>
+          Scrollez vers le bas !
+          <div className="scroll-arrows">
+            <span className="arrow"></span>
+            <span className="arrow"></span>
+            <span className="arrow"></span>
+          </div> 
         </div>
       </div>
     </div>
